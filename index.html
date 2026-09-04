@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Helix Kaartenportaal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="login" class="login-screen">
+    <section class="login-card">
+      <div class="accent"></div>
+      <div class="login-content">
+        <div class="icon">&#128274;</div><p class="eyebrow">HELIX</p>
+        <h1>Kaartenportaal</h1>
+        <p>Voer de viercijferige toegangscode in om de beschikbare tracékaarten te bekijken.</p>
+        <form id="login-form">
+          <label for="code">Toegangscode</label>
+          <input id="code" type="password" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" autocomplete="one-time-code" placeholder="••••" required>
+          <p id="error" class="error" aria-live="polite"></p>
+          <button type="submit">Portaal openen</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <main id="portal" class="portal" hidden>
+    <header><div class="header-inner"><div><p class="eyebrow">HELIX</p><h1>Kaartenportaal</h1></div><button id="logout" class="logout">Uitloggen</button></div></header>
+    <section class="content">
+      <div class="intro"><div><p class="blue">OVERZICHT TRACÉS</p><h2>Kies een kaart om het tracé te openen</h2><p>Elke tegel verwijst naar een eigen Leaflet-export. Je kunt een kaart vervangen zonder het portaal aan te passen.</p></div><input id="search" type="search" placeholder="Zoek een tracé..." aria-label="Zoek een tracé"></div>
+      <div id="cards" class="cards">
+        <a class="card blue-card" data-search="helix middenmeer" href="maps/middenmeer/index.html"><div class="card-top">&#128506;</div><div class="card-body"><h3>Helix Middenmeer</h3><p>Interactieve Leaflet-kaart van het tracé Middenmeer.</p></div></a>
+        <a class="card green-card" data-search="helix slootdorp" href="maps/slootdorp/index.html"><div class="card-top">&#128506;</div><div class="card-body"><h3>Helix Slootdorp</h3><p>Interactieve Leaflet-kaart van het tracé Slootdorp.</p></div></a>
+        <a class="card orange-card" data-search="helix robbenoord" href="maps/robbenoord/index.html"><div class="card-top">&#128506;</div><div class="card-body"><h3>Helix Robbenoord</h3><p>Interactieve Leaflet-kaart van het tracé Robbenoord.</p></div></a>
+      </div>
+      <aside><strong>Let op:</strong> deze pincode is alleen een eenvoudige toegangsdrempel en geen bescherming voor vertrouwelijke informatie.</aside>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
