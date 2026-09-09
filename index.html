@@ -2,41 +2,53 @@
 <html lang="nl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Helix Kaartenportaal</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Helix | Kaartenportaal</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main id="login" class="login-screen">
-    <section class="login-card">
-      <div class="accent"></div>
-      <div class="login-content">
-        <div class="icon">&#128274;</div><p class="eyebrow">HELIX</p>
-        <h1>Kaartenportaal</h1>
-        <p>Voer de viercijferige toegangscode in om de beschikbare tracékaarten te bekijken.</p>
-        <form id="login-form">
-          <label for="code">Toegangscode</label>
-          <input id="code" type="password" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" autocomplete="one-time-code" placeholder="••••" required>
-          <p id="error" class="error" aria-live="polite"></p>
-          <button type="submit">Portaal openen</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <main id="portal" class="portal" hidden>
-    <header><div class="header-inner"><div><p class="eyebrow">HELIX</p><h1>Kaartenportaal</h1></div><button id="logout" class="logout">Uitloggen</button></div></header>
-    <section class="content">
-      <div class="intro"><div><p class="blue">OVERZICHT TRACÉS</p><h2>Kies een kaart om het tracé te openen</h2><p>Elke tegel verwijst naar een eigen Leaflet-export. Je kunt een kaart vervangen zonder het portaal aan te passen.</p></div><input id="search" type="search" placeholder="Zoek een tracé..." aria-label="Zoek een tracé"></div>
-      <div id="cards" class="cards">
-        <a class="blue-card" data-search="helix middenmeer" href="maps/middenmeer/index.html"><div class="card-top">&#128506;</div><div class="card-body"><h3>Helix Middenmeer</h3><p>Interactieve Leaflet-kaart van het tracé Middenmeer</p></div></a>
-        <a class="green-card" data-search="helix slootdorp" href="maps/slootdorp/index.html"><div class="card-top">&#128506;</div><div class="card-body"><h3>Helix Slootdorp</h3><p>Interactieve Leaflet-kaart van het tracé Slootdorp.</p></div></a>
-        <a class="orange-card" data-search="helix robbenoord" href="maps/robbenoord/index.html"><div class="card-top">&#128506;</div><div class="card-body"><h3>Helix Robbenoord</h3><p>Interactieve Leaflet-kaart van het tracé Robbenoord.</p></div></a>
-        <a class="blue-card" data-search="helix kruisweg" href="maps/kruisweg/index.html"><div class="card-top">&#128506;</div><div class="card-body"><h3>Helix Kruisweg</h3><p>Interactieve Leaflet-kaart van het tracé Kruisweg</p></div></a>
-      </div>
-    </section>
-  </main>
-  <script src="script.js"></script>
+<main id="login" class="login-screen">
+  <section class="login-panel">
+    <img src="assets/buro-coen-logo.svg" alt="Buro Coen" class="login-logo">
+    <div class="rule"></div>
+    <p class="kicker">PROJECT HELIX</p>
+    <h1>Kaartenportaal</h1>
+    <p class="subtext">Voer de viercijferige toegangscode in om door te gaan.</p>
+    <form id="login-form">
+      <label for="code">Toegangscode</label>
+      <input id="code" type="password" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" autocomplete="one-time-code" required>
+      <p id="error" class="error" aria-live="polite"></p>
+      <button type="submit">Portaal openen</button>
+    </form>
+    <p class="security-note">Alleen bestemd voor geautoriseerde gebruikers.</p>
+  </section>
+</main>
+<main id="portal" hidden>
+  <header class="site-header">
+    <div class="header-inner">
+      <img src="assets/buro-coen-logo.svg" alt="Buro Coen" class="header-logo">
+      <div class="project-title"><span>PROJECT HELIX</span><strong>Kaartenportaal</strong></div>
+      <button id="logout" class="text-button">Uitloggen</button>
+    </div>
+  </header>
+  <section class="content">
+    <div class="page-heading">
+      <div><p class="kicker">TRACÉOVERZICHT</p><h1>Selecteer een tracé</h1><p>Open de actuele interactieve kaart van het gewenste tracé.</p></div>
+      <label class="search-label">Zoeken<input id="search" type="search" placeholder="Zoek op tracénaam"></label>
+    </div>
+    <div class="trace-grid"><a class="trace-card" data-search="helix middenmeer naok 1" href="maps/middenmeer-naok-1/index.html"><div class="card-number">01</div><div><h3>Middenmeer NAOK 1</h3><p>Open interactieve tracékaart</p></div><span aria-hidden="true">↗</span></a>
+<a class="trace-card" data-search="helix middenmeer naok 2" href="maps/middenmeer-naok-2/index.html"><div class="card-number">02</div><div><h3>Middenmeer NAOK 2</h3><p>Open interactieve tracékaart</p></div><span aria-hidden="true">↗</span></a>
+<a class="trace-card" data-search="helix rekerkoogweg" href="maps/rekerkoogweg/index.html"><div class="card-number">03</div><div><h3>Rekerkoogweg</h3><p>Open interactieve tracékaart</p></div><span aria-hidden="true">↗</span></a>
+<a class="trace-card" data-search="helix kruisweg" href="maps/kruisweg/index.html"><div class="card-number">04</div><div><h3>Kruisweg</h3><p>Open interactieve tracékaart</p></div><span aria-hidden="true">↗</span></a>
+<a class="trace-card" data-search="helix rijksweg" href="maps/rijksweg/index.html"><div class="card-number">05</div><div><h3>Rijksweg</h3><p>Open interactieve tracékaart</p></div><span aria-hidden="true">↗</span></a>
+<a class="trace-card" data-search="helix zuiderdijkweg" href="maps/zuiderdijkweg/index.html"><div class="card-number">06</div><div><h3>Zuiderdijkweg</h3><p>Open interactieve tracékaart</p></div><span aria-hidden="true">↗</span></a>
+<a class="trace-card" data-search="helix robbenoord" href="maps/robbenoord/index.html"><div class="card-number">07</div><div><h3>Robbenoord</h3><p>Open interactieve tracékaart</p></div><span aria-hidden="true">↗</span></a>
+<a class="trace-card" data-search="helix slootdorp naok 1" href="maps/slootdorp-naok-1/index.html"><div class="card-number">08</div><div><h3>Slootdorp NAOK 1</h3><p>Open interactieve tracékaart</p></div><span aria-hidden="true">↗</span></a>
+<a class="trace-card" data-search="helix slootdorp naok 2" href="maps/slootdorp-naok-2/index.html"><div class="card-number">09</div><div><h3>Slootdorp NAOK 2</h3><p>Open interactieve tracékaart</p></div><span aria-hidden="true">↗</span></a></div>
+    <footer><span>Buro Coen</span><span>Helix kaartenportaal</span></footer>
+  </section>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
