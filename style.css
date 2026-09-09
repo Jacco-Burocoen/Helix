@@ -160,13 +160,16 @@ button{
     font-size:30px;
     color:white
 }
-.blue-card .card-top{
+.1-card .card-top{
     background:linear-gradient(135deg,#3b82f6,#22d3ee)
 }
-.green-card .card-top{
+.2-card .card-top{
     background:linear-gradient(135deg,#10b981,#2dd4bf)
 }
-.orange-card .card-top{
+.3-card .card-top{
+    background:linear-gradient(135deg,#f59e0b,#fb923c)
+}
+.4-card .card-top{
     background:linear-gradient(135deg,#f59e0b,#fb923c)
 }
 .card-body{
